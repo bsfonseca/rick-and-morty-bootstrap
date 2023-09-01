@@ -1,0 +1,45 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  font-size: 30px;
+  text-align: center;
+}
+
+.img-fundo {
+  background-image: url(./image/FUNDO.jpg);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-size: cover;
+  background-position: 0% center;
+  flex: 1;
+}
+
+.container-personagens {
+  padding-top: 40px;
+}
+
+.personagem .row {
+  margin: 8px 0;
+  border: 1px solid #333;
+  background-color: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: #000 2px 2px 5px;
+  opacity: 0.8;
+}
+
+.conteudo {
+  padding: 20px;
+}
+
+.imagem-personagem {
+  background-image: url("./image/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png");
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
