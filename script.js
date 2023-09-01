@@ -1,7 +1,8 @@
 const lista = document.getElementById("lista");
+let page = 1;
 
 const listarPersonagens = async () => {
-  const result = await axios.get("https://rickandmortyapi.com/api/character/?page=1");
+  const result = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`);
   atualizarLista(result.data.results);
 };
 
@@ -38,4 +39,19 @@ const atualizarLista = (personagens) => {
 
     lista.innerHTML += personagemHtml;
   }
+};
+
+const proximaPage = () => {
+  page++;
+  listarPersonagens();
+};
+
+const anteriorPage = () => {
+  if (page == 1) {
+    alert("Você não pode voltar da página 1");
+    return;
+  }
+
+  page--;
+  listarPersonagens();
 };
