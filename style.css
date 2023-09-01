@@ -43,3 +43,15 @@ body {
   background-position: center;
   background-color: white;
 }
+
+.vivo {
+  color: green;
+}
+
+.morto {
+  color: red;
+}
+
+.desconhecido {
+  color: orange;
+}
