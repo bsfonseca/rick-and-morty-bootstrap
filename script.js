@@ -1,7 +1,7 @@
 const lista = document.getElementById("lista");
 
 const listarPersonagens = async () => {
-  const result = await axios.get("https://rickandmortyapi.com/api/character");
+  const result = await axios.get("https://rickandmortyapi.com/api/character/?page=1");
   atualizarLista(result.data.results);
 };
 
@@ -19,13 +19,18 @@ const atualizarLista = (personagens) => {
     }
 
     const personagemHtml = `
-    <div class="personagem col-12 col-sm-6">
-        <div class="row">
-        <div class="col-3 imagem-personagem"></div>
-        <div class="col-9 conteudo">
+    <div class="personagem col-12 col-md-6">
+        <div class="personagem-row">
+        <div class="imagem-personagem">
+          <img src="${personagem.image}" alt="" />
+        </div>
+        <div class="conteudo">
             <h2>${personagem.name}</h2>
             <p>${personagem.species}</p>
-            <p  class="${vivo}" >${personagem.status}</p>
+            <div class="${vivo}">
+              <span class="bloco"></span>
+              <span>${personagem.status}</span>
+            </div>
         </div>
         </div>
     </div>
