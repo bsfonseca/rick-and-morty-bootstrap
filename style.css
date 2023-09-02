@@ -108,3 +108,8 @@ footer {
   font-size: 20px;
   margin-left: 20px;
 }
+
+#modal-body {
+  display: flex;
+  flex-direction: row;
+}

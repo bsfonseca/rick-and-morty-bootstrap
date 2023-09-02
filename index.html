@@ -28,11 +28,34 @@
 
     <main class="img-fundo">
       <div class="container container-personagens">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="personagemModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-title">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div> -->
+              <div class="modal-body" id="modal-body">
+                <img src="" alt="" height="160" />
+                <h3>Nome do personagem</h3>
+                <p>Especie do personagem</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="row" id="lista"></div>
         <div>
           <nav aria-label="Page navigation example">
             <ul class="pagination">
-              <li class="page-item"><button onclick="anteriorPage()" disabled>Anterior</button></li>
+              <li class="page-item"><button onclick="anteriorPage()">Anterior</button></li>
 
               <li class="page-item"><button onclick="proximaPage()">Próximo</button></li>
             </ul>
