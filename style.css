@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Handjet&family=Josefin+Sans&family=Lato&family=Montserrat:ital,wght@0,400;1,300&family=Oswald&family=Roboto:ital@1&display=swap");
+
 body {
   height: 100vh;
   display: flex;
@@ -5,8 +7,11 @@ body {
 }
 
 .titulo {
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
+  font-family: "Anton", sans-serif;
+  animation: fade-in 1s ease-in;
+  color: #203720;
 }
 
 .img-fundo {
@@ -20,7 +25,7 @@ body {
 }
 
 .container-personagens {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .personagem .personagem-row {
@@ -43,7 +48,7 @@ body {
 }
 
 .imagem-personagem {
-  background-color: white;
+  background-color: rgb(251, 255, 255);
   width: 35%;
   min-width: 120px;
 }
@@ -52,6 +57,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#img-esquerda {
+  float: left;
+  width: 5500px;
+  margin-right: 1000px;
 }
 
 .vivo span {
@@ -89,11 +100,6 @@ body {
   background-color: orange;
 }
 
-footer {
-  background-color: #131e0c;
-  color: #ccc;
-}
-
 .pagination {
   display: flex;
   flex-direction: row;
@@ -112,4 +118,80 @@ footer {
 #modal-body {
   display: flex;
   flex-direction: row;
+  height: 400px;
+  width: 700px;
+  background-color: #eef9fa;
+  border-radius: 10px;
+  border-bottom: #000;
+  animation: scale 2s ease-in-out infinite alternate;
+}
+
+#modal-interno h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+#modal-interno p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #131e0c;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+#footer-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+.conteudo p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+}
+
+.conteudo span {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  /* color: rgb(251, 0, 255); */
+  color: #0e25b8;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #modal-body {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }

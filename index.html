@@ -17,7 +17,7 @@
     <header class="container" style="padding-top: 50px">
       <form class="d-flex flex-column align-items-center">
         <div class="mb-3 col-12 col-sm-8">
-          <h1 class="text-success titulo">Api de Rick and Morty</h1>
+          <h1 class="titulo">Api de Rick and Morty</h1>
           <div class="d-flex align-items-center mt-3" style="width: 100%">
             <input type="email" class="form-control me-2" id="exampleInputEmail1" aria-describedby="emailHelp" />
             <i class="bi bi-search"></i>
@@ -36,16 +36,19 @@
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <!-- <div class="modal-header">
                 <h1 class="modal-title fs-5" id="modal-title">Modal title</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div> -->
               <div class="modal-body" id="modal-body">
-                <img src="" alt="" height="160" />
-                <h3>Nome do personagem</h3>
-                <p>Especie do personagem</p>
+                <img src="" alt="" height="350" />
+                <div id="modal-interno">
+                  <h3>Nome do personagem</h3>
+                  <br />
+                  <p>Especie do personagem</p>
+                </div>
               </div>
             </div>
           </div>
@@ -65,8 +68,9 @@
     </main>
 
     <footer>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quos, facilis similique error ducimus at, quisquam
-      quae soluta voluptates molestiae dignissimos iusto dolorem voluptatum temporibus odit. Officiis odio sapiente in?
+      <div id="footer-container">
+        <p>Desenvolvido por: <strong> Bruna Fonseca </strong> em 2023.</p>
+      </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
